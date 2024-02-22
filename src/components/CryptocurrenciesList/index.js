@@ -32,22 +32,14 @@ class CryptocurrenciesList extends Component {
     const {cryptoData} = this.state
 
     return (
-      <ul className="cryptocurrency-item-list">
-        <li className="cryptocurrency-list-header">
-          <h1 className="list-title">Cryptocurrency Tracker</h1>
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/cryptocurrency-bg.png"
-            alt="crypocurrency"
-            className="app-logo"
-          />
-        </li>
+      <>
         {cryptoData.map(eachCurrency => (
           <CryptocurrencyItem
             key={eachCurrency.id}
             cryptocurrencyData={eachCurrency}
           />
         ))}
-      </ul>
+      </>
     )
   }
 
@@ -60,7 +52,19 @@ class CryptocurrenciesList extends Component {
             <Loader type="Rings" color="#ffffff" height={80} width={80} />
           </div>
         ) : (
-          <>{this.renderCryptocurrencyItem()}</>
+          <>
+            <div className="cryptocurrency-list-header">
+              <h1 className="list-title">Cryptocurrency Tracker</h1>
+              <img
+                src="https://assets.ccbp.in/frontend/react-js/cryptocurrency-bg.png"
+                alt="crypocurrency"
+                className="app-logo"
+              />
+            </div>
+            <ul className="cryptocurrency-item-list">
+              {this.renderCryptocurrencyItem()}
+            </ul>
+          </>
         )}
       </>
     )
