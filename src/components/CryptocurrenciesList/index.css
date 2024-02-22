@@ -18,12 +18,13 @@
 }
 
 .list-title {
-  font-size: 34px;
+  font-size: 14px;
 }
 
 .cryptocurrency-item-list {
   list-style-type: none;
-  padding-left: 0;
-  border: solid 2px #00e7ff;
+  padding: 9px 5px;
+  border: solid 3px #00e7ff;
   border-radius: 9px;
+  width: 90%;
 }

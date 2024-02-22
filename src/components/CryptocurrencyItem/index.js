@@ -8,7 +8,9 @@ const CryptocurrencyItem = props => {
     <li className="cryptocurrency-item">
       <div className="currency-details">
         <img src={currencyLogo} alt={currencyName} className="currency-logo" />
-        <p className="currency-name">{currencyName}</p>
+        <div className="name-card ">
+          <p className="currency-name">{currencyName}</p>
+        </div>
       </div>
       <div className="currency-value-card">
         <p className="currency-value">{usdValue}</p>
